@@ -15,15 +15,15 @@ MOM allows you implement an asynchronous, routable and transformable message que
 API-centric architecture::
 Typically, a developer working on a back-end application implements a synchronous RESTful API to allow communication from other applications.
 
-You may identify business value, as part of an application modernization effort, in integrating a message queue with an API.
-This is not trivial because of the conflicting underlying timing models, and the data may require transformation to be usable.
+You may identify business value, as part of an application modernization effort, by integrating a message queue with an API.
+This is not trivial because of the conflicting underlying timing models. The data may require transformation to be usable.
 
-In this walkthrough, you create a simple and intuitive integration, with built-in monitoring, to enable communication between two applications:
+In this walkthrough, you create a simple and intuitive integration with built-in monitoring, to enable communication between two applications:
 
 * A Node.js webapp provides a method to create messages, in this example, a new inventory item.
 * A Spring Boot CRUD app provides a RESTful API, in this example, an inventory API.
 
-To create this integration, you use link:{enmasse-url}[AMQ Online, window="_blank"] and API connectors in link:{fuse-url}[Red Hat Fuse Online, window="_blank"].
+To create this integration, use link:{enmasse-url}[AMQ Online, window="_blank"] and API connectors in link:{fuse-url}[Red Hat Fuse Online, window="_blank"].
 
 All of the applications and services used in the walkthrough are running on Red Hat OpenShift.
 
@@ -71,7 +71,7 @@ image::images/arch.png[integration, role="integr8ly-img-responsive"]
 
 // tag::creating-api-connector[]
 
-To route messages to the Spring Boot app, you create an address in AMQ Online.
+To route messages to the Spring Boot app, create an address in AMQ Online.
 
 . Log into link:{enmasse-url}[AMQ Online, window="_blank"].
 . Select *Addresses* from the left hand menu.
@@ -173,7 +173,7 @@ Verify that you followed each step in the procedure above.  If you are still hav
 [.integr8ly-docs-header]
 === Creating HTTP connection to CRUD App
 
-To enable Fuse Online to send messages from the queue to the Spring Boot CRUD app, you create a connection in Red Hat Fuse Online using the API connector you just created.
+To enable Fuse Online to send messages from the queue to the Spring Boot CRUD app, create a connection in Red Hat Fuse Online using the API connector you just created.
 
 
 . Log in to the link:{fuse-url}[Red Hat Fuse Online, window="_blank"] console.
@@ -208,7 +208,7 @@ Verify that you followed each step in the procedure above.  If you are still hav
 [.integr8ly-docs-header]
 === Creating AMQP connection in Red Hat Fuse Online
 
-To allow Fuse Online to consume messages placed on the queue by the Node.js webapp, you create a connection in Red Hat Fuse Online.
+To allow Fuse Online to consume messages placed on the queue by the Node.js webapp, create a connection in Red Hat Fuse Online.
 
 
 :fuse-url: https://eval.apps.city.openshiftworkshop.com/
@@ -371,7 +371,7 @@ Is the integration displayed as *Running* on the *Integrations* screen of the li
 == Using the application integration
 :context: using-the-application-integration
 
-After setting up the integration between the Node.js and Spring Boot applications, we can use the integration to create a new fruit for the grocery inventory application.
+After setting up the integration between the Node.js and Spring Boot applications, use the integration to create a new fruit for the grocery inventory application.
 
 :node-url: http://frontend-node-app.apps.city.openshiftworkshop.com/
 :spring-url: http://spring-boot-rest-http-crud-spring-app.apps.city.openshiftworkshop.com/
